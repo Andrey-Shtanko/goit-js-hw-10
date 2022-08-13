@@ -12,7 +12,7 @@ inputField.addEventListener(`input`, debounce(onInputSearch, DEBOUNCE_DELAY))
 
 
 function onInputSearch(e) {
-    const name = e.target.value
+    const name = e.target.value.trim()
     fetchCountries(name).then(r => r.json())
         .then(country => {if (country.length > 10) {
             Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
