@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-ul{
+ul, p{
   padding: 0;
   margin: 0;
 }
@@ -37,7 +37,7 @@ background-repeat: no-repeat, no-repeat;
   margin-bottom: 16px;
 }
 
-.country-list{
+.country-list, .country-info {
   z-index: 3;
   list-style: none;
   display: flex;
@@ -57,4 +57,31 @@ background-repeat: no-repeat, no-repeat;
   font-weight: 600;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 28px;
+}
+
+.country-item{
+  display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+}
+
+.info-text{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.country-card{
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  
+}
+.country-name{
+font-weight: 900;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 42px;
 }
