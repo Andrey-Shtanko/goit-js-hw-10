@@ -1,5 +1,9 @@
 export default function markUpForOneCountry ({ name: { official }, capital, population, flags: { svg }, languages }) {
-    const langList = Object.values(languages)
+  const langString = Object.values(languages).reduce((acc, lang) => {                    
+                    return acc + `${lang}, `
+  }, ``)
+    const langList = langString.slice(0, langString.length - 2)
+ 
     return `<div class='country-card'><img src="${svg}" alt="flag" width="40" height="30" class="item-img" /><span
   class="country-name"
 >${official}</span></div>

@@ -30,12 +30,11 @@ function onInputSearch(e) {
                 countryList.insertAdjacentHTML(`beforeend`,markUpForSeveralCountries(country[i]))
                 background.style.backgroundImage = ``
             }
-            console.log(country);
+           
         } else if (country.length === 1) {
                 countryInfo.innerHTML = markUpForOneCountry(country[0])
                 const flagImg = country[0].flags.png
-                background.style.backgroundImage = ` url(${flagImg})`
-            console.log(country);
+                background.style.backgroundImage = ` url(${flagImg})`           
             } else {
                 background.style.backgroundImage = ``
             countryList.innerHTML=``
