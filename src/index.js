@@ -19,15 +19,12 @@ function onInputSearch(e) {
         } else if (country.length >= 2 && country.length <= 100) {
             
             console.log(country);
-        } else {
+        } else if (country.length === 1) {
             console.log(country);
+        }else {
+            Notiflix.Notify.failure('Oops, there is no country with that name')
         }}
     ).catch(error => {
-                if (error) {
-                   Notiflix.Notify.warning('Oops, there is no country with that name') 
-                }
-            })
-   
-    
-    
+        console.log(error.message)  
+    })   
 }
