@@ -22,7 +22,6 @@ function onInputSearch(e) {
     Notiflix.Notify.failure('Oops, there is no country with that name');
   } else {
     fetchCountries(name)
-      .then(r => r.json())
       .then(country => {
         if (country.length > 10) {
           countryList.innerHTML = ``;

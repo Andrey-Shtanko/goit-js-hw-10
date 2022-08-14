@@ -1,5 +1,11 @@
-
 export default function fetchCountries(name) {
-    const searchParameters =  `fields=name,capital,population,flags,languages `
-    return fetch(`https://restcountries.com/v3.1/name/${name}?${searchParameters}`)
+  const searchParameters = `fields=name,capital,population,flags,languages `;
+  return fetch(
+    `https://restcountries.com/v3.1/name/${name}?${searchParameters}`
+  ).then(response => {
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    return response.json();
+  });
 }
