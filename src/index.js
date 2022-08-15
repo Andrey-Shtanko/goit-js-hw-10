@@ -20,6 +20,8 @@ function onInputSearch(e) {
   const name = e.target.value.trim();
   if (name === ``) {
     Notiflix.Notify.failure('Oops, there is no country with that name');
+    background.style.backgroundImage = ``;
+          countryList.innerHTML = ``;
   } else {
     fetchCountries(name)
       .then(country => {
@@ -47,6 +49,9 @@ function onInputSearch(e) {
         }
       })
       .catch(error => {
+        background.style.backgroundImage = ``;
+          countryList.innerHTML = ``;
+        Notiflix.Notify.failure('Oops, there is no country with that name');
         console.log(error.message);
       });
   }
